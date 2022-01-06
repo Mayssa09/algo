@@ -1,0 +1,22 @@
+ALGORITHM algorithm_name
+VAR
+ set1: ARRAY_OF INTEGER[];
+ set2: ARRAY_OF INTEGER[];
+ sum = 0;
+ i,j : INTEGER ;
+BEGIN
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+       FOR j FROM 0 TO set2.length-1 STEP 1  DO
+        IF  (set1[i]!=set2[j]) THEN
+            sum += set1[i]
+        END_IF
+       END_FOR
+    END_FOR
+    FOR j FROM 0 TO set2.length-1 STEP 1  DO
+       FOR i FROM 0 TO set1.length-1 STEP 1  DO
+        IF  (set1[j]!=set2[i]) THEN
+            sum += set2[j]
+        END_IF
+       END_FOR
+    END_FOR     
+END
